@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Kaindi Safari</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Kaindi Safari</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                 <li><button id="darkModeToggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>My Projects</h2>
+            <p>Here are some of the projects I've built while learning cloud engineering</p>
+        </section>
+
+        <section class="project">
+            <h3> Personal Portfolio Website</h3>
+            <p><strong>Technologies:</strong> HTML, CSS, AWS S3, CloudFront</p>
+            <p>Built and deployed my personal portfolio website using AWS S3 for hosting and CloudFront for content delivery. Implemented static website hosting with custom domain and HTTPS.</p>
+            <p><strong>What I learned:</strong> S3 bucket policies, static website hosting, CDN configuration, and DNS management with Route 53.</p>
+            <a href="https://github.com/kaindisafari/portfolio" class="project-link">View on GitHub →</a>
+            <div class="project-image">
+    <img src="project-screenshot.jpg" alt="Project screenshot">
+</div>
+        </section>
+
+        <section class="project">
+            <h3> Custom VPC Architecture</h3>
+            <p><strong>Technologies:</strong> AWS VPC, EC2, Security Groups</p>
+            <p>Designed and implemented a custom VPC from scratch with public and private subnets, internet gateway, NAT gateway, and proper routing tables.</p>
+            <p><strong>What I learned:</strong> Network architecture, subnet design, security group configuration, and best practices for cloud networking.</p>
+            <a href="#" class="project-link">Coming Soon</a>
+            <div class="project-image">
+    <img src="project-screenshot.jpg" alt="Project screenshot">
+</div>
+        </section>
+
+        <section class="project">
+            <h3> Scalable Web Application</h3>
+            <p><strong>Technologies:</strong> EC2, ALB, Auto Scaling, RDS</p>
+            <p>Built a highly available web application using EC2 instances behind an Application Load Balancer with Auto Scaling capabilities and RDS database.</p>
+            <p><strong>What I learned:</strong> Load balancing, auto-scaling policies, database management, and designing for high availability.</p>
+            <a href="#" class="project-link">Coming Soon</a>
+            <div class="project-image">
+    <img src="project-screenshot.jpg" alt="Project screenshot">
+</div>
+        </section>
+
+        <section class="project">
+            <h3> Serverless REST API</h3>
+            <p><strong>Technologies:</strong> Lambda, API Gateway, DynamoDB</p>
+            <p>Created a serverless CRUD API using AWS Lambda functions, API Gateway for endpoints, and DynamoDB for data storage.</p>
+            <p><strong>What I learned:</strong> Serverless architecture, API design, Lambda functions, and NoSQL databases.</p>
+            <a href="#" class="project-link">Coming Soon</a>
+            <div class="project-image">
+    <img src="project-screenshot.jpg" alt="Project screenshot">
+</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Connect with me: <a href="https://linkedin.com/in/kaindisafari">LinkedIn</a> | <a href="https://github.com/yourusername">GitHub</a></p>
+    </footer>
+    <script>
+        const toggle = document.getElementById('darkModeToggle');
+        
+        // Check if user previously selected dark mode
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            toggle.textContent = '☀️';
+        }
+        
+        // Toggle dark mode
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                toggle.textContent = '☀️';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                toggle.textContent = '🌙';
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+</html>

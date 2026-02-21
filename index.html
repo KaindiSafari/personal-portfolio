@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaindi Safari - Cloud Engineer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>KAINDI SAFARI</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><button id="darkModeToggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Cloud Engineer</h2>
+            <p>Building scalable infrastructure </p>
+        </section>
+
+        <section class="about">
+            <h3>About Me</h3>
+            <p>I'm a cloud engineer specializing in AWS, currently on a journey to become a Solutions Architect. I document my learning and share my projects here.</p>
+        </section>
+
+        <section class="certifications">
+            <h3>Certifications</h3>
+            <ul>
+                <li>AWS Certified Cloud Practitioner</li>
+                <li>AWS Solutions Architect Associate (In Progress)</li>
+            </ul>
+            <h3>Skills and Technologies</h3>
+            <div class="skills-grid">
+                <div class="skill-item">~ AWS Cloud Services</div>
+                <div class="skill-item">~ Linux Administration</div>
+                <div class="skill-item">~ Python (Learning)</div>
+                <div class="skill-item">~ HTML and CSS</div>
+                <div class="skill-item">~ Git and GitHub</div>
+                <div class="skill-item">~ Terraform(Learning)</div>
+                <section class="skills-bars">
+    <h3>Technical Skills</h3>
+    <div class="skill-bar">
+        <div class="skill-name">AWS Cloud Services</div>
+        <div class="bar">
+            <div class="progress" style="width: 60%"></div>
+        </div>
+    </div>
+    <div class="skill-bar">
+        <div class="skill-name">Linux Administration</div>
+        <div class="bar">
+            <div class="progress" style="width: 50%"></div>
+        </div>
+    </div>
+    <div class="skill-bar">
+        <div class="skill-name">HTML and CSS</div>
+        <div class="bar">
+            <div class="progress" style="width: 70%"></div>
+        </div>
+    </div>
+    <div class="skill-bar">
+        <div class="skill-name">Python</div>
+        <div class="bar">
+            <div class="progress" style="width: 40%"></div>
+        </div>
+    </div>
+</section>
+            </div>
+        </section>
+        <section class="learning">
+            <h3>Currently Learning</h3>
+            <ul>
+                <li> AWS Solutions Architect Associate certification</li>
+                <li> Infrastructure as Code with Terraform</li>
+                <li> Docker and Containerization</li>
+                <li> CI/CD Pipelines</li>
+            </ul>
+        </section>
+        <section class="contact">
+    <h3>Get In Touch</h3>
+    <form class="contact-form">
+        <input type="text" placeholder="Your name" rows="5" required>
+        <input type="email" placeholder="Your Email" rows="5" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+    </main>
+
+    <footer>
+        <p>Connect with me: <a href="https://linkedin.com/in/kaindisafari">LinkedIn</a> | <a href="https://github.com/kaindisafari">GitHub</a></p>
+    </footer>
+    <script>
+const text = "Cloud Engineer";
+const element = document.querySelector('.hero h2');
+let index = 0;
+
+element.textContent = '';
+
+function typeWriter() {
+    if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+    }
+}
+
+window.addEventListener('load', typeWriter);
+</script>
+<script>
+        const toggle = document.getElementById('darkModeToggle');
+        
+        // Check if user previously selected dark mode
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            toggle.textContent = '☀️';
+        }
+        
+        // Toggle dark mode
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                toggle.textContent = '☀️';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                toggle.textContent = '🌙';
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+</html>

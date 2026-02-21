@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Kaindi Safari</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Kaindi Safari</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><button id="darkModeToggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Blog</h2>
+            <p> documenting my cloud engineering journey</p>
+        </section>
+        <article class="blog-post">
+            <h3>How I Deployed My First Website to AWS S3</h3>
+            <p class="post-meta">February 2025 | AWS, S3, CloudFront</p>
+            <p>Today I deployed my personal portfolio website to AWS S3 for the first time. Here's what I learned and the challenges I faced...</p>
+            <p><strong>The Challenge:</strong> I wanted to host my portfolio website without paying for a server. AWS S3's static website hosting was the perfect solution.</p>
+            <p><strong>What I Did:</strong></p>
+            <ul>
+                <li>Created an S3 bucket with a globally unique name</li>
+                <li>Configured the bucket for static website hosting</li>
+                <li>Set up bucket policies to make content publicly accessible</li>
+                <li>Uploaded my HTML, CSS, and assets</li>
+                <li>Tested the website using the S3 endpoint</li>
+            </ul>
+            <p><strong>Key Learnings:</strong> Understanding bucket policies was crucial. I learned about AWS IAM policies and how to properly configure public access while maintaining security best practices.</p>
+            <p><strong>Next Steps:</strong> I plan to add CloudFront for faster content delivery and set up a custom domain with Route 53.</p>
+            <a href="#" class="read-more">Read full post →</a>
+        </article>
+
+        <article class="blog-post">
+            <h3>Understanding AWS VPCs: My Journey</h3>
+            <p class="post-meta">Coming Soon |  AWS, VPC, Networking</p>
+            <p>I'm currently learning about Virtual Private Clouds (VPCs) in AWS. This post will cover my understanding of subnets, route tables, internet gateways, and security groups...</p>
+            <a href="#" class="read-more">Coming Soon</a>
+        </article>
+
+        <article class="blog-post">
+            <h3>My First Month Learning AWS</h3>
+            <p class="post-meta"> Coming Soon |  Learning Journey</p>
+            <p>Reflections on my first month studying for the AWS Solutions Architect Associate certification and building hands-on projects...</p>
+            <a href="#" class="read-more">Coming Soon</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>Connect with me: <a href="https://linkedin.com/in/kaindisafari">LinkedIn</a> | <a href="https://github.com/kaindisafari">GitHub</a></p>
+    </footer>
+    <script>
+        const toggle = document.getElementById('darkModeToggle');
+        
+        // Check if user previously selected dark mode
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            toggle.textContent = '☀️';
+        }
+        
+        // Toggle dark mode
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                toggle.textContent = '☀️';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                toggle.textContent = '🌙';
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+</html>
