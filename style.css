@@ -285,3 +285,26 @@ body.dark-mode footer {
 body.dark-mode .page-header h2 {
     color: #c9d1d9;
 }
+/* Project Images */
+.project-image {
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.project-image:hover img {
+    transform: scale(1.02);
+}
+
+/* Dark mode adjustments for images */
+body.dark-mode .project-image {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
