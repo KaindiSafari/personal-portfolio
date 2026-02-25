@@ -308,3 +308,48 @@ body.dark-mode .page-header h2 {
 body.dark-mode .project-image {
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
+/* Project Section Headers */
+.project-section-header {
+    margin: 4rem 0 2rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.project-section-header h2 {
+    color: white;
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Project Images Grid for Multiple Images */
+.project-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* Project Status Badge */
+.project-status {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 8px;
+    color: #856404;
+    font-weight: 600;
+}
+
+/* Dark Mode Updates */
+body.dark-mode .project-section-header {
+    background: linear-gradient(135deg, #434343 0%, #1a1a1a 100%);
+}
+
+body.dark-mode .project-status {
+    background: #2d2d2d;
+    border-left-color: #ffc107;
+    color: #ffc107;
+}
